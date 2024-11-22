@@ -79,7 +79,6 @@
         width: 100%;
         .list-image {
           display: flex;
-          flex-wrap: wrap;
           justify-content: center;
           gap: 1rem;
           padding: 2rem 0;
@@ -89,6 +88,12 @@
         }
         .description {
           text-align: center;
+        }
+
+        @media (max-width: 960px) {
+          .list-image {
+            flex-wrap: wrap;
+          }
         }
       }
     }
@@ -123,16 +128,15 @@
           }
         }
       }
-      
-      @media (max-width: 768px) {
+      @media (max-width: 960px) {
         .detail-content {
-            grid-template-columns: 1fr;
+          grid-template-columns: 1fr;
         }
         .item:nth-child(3) {
-            order: 4;
+          order: 4;
         }
         .item:nth-child(4) {
-            order: 3;
+          order: 3;
         }
       }
     }
